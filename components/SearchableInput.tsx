@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
   ScrollView,
-  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
@@ -44,23 +43,25 @@ const SearchableInput: React.FC<SearchableInputProps> = ({
   }, [matchingStations, selected]);
 
   return (
-    <View style={styles.container}>
-      <Text>{label}</Text>
+    <View className="gap-2 mb-4">
+      <Text className="text-white">{label}</Text>
       <TextInput
         onChangeText={handleChanges}
         value={value}
         placeholder={placeholder}
+        className="p-2 border border-gray-300 rounded-md text-white"
+        placeholderTextColor={"gray"}
       />
       {filterData.length > 0 && (
-        <View style={styles.searchContainer}>
-          <ScrollView>
+        <View className="max-h-[200px]">
+          <ScrollView className="border rounded-md border-gray-300">
             {filterData.map((station) => (
               <TouchableOpacity
                 key={station}
-                style={styles.touchableStation}
+                className="p-1"
                 onPress={() => handleSelectStation(station)}
               >
-                <Text>{station}</Text>
+                <Text className="text-white">{station}</Text>
               </TouchableOpacity>
             ))}
           </ScrollView>
@@ -69,17 +70,5 @@ const SearchableInput: React.FC<SearchableInputProps> = ({
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    gap: 8,
-  },
-  searchContainer: {
-    maxHeight: 200,
-  },
-  touchableStation: {
-    padding: 4,
-  },
-});
 
 export default SearchableInput;
