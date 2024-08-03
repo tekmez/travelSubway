@@ -61,7 +61,7 @@ const FindRoute = () => {
             className="bg-white h-12 justify-center items-center rounded-lg mt-4"
             onPress={onPress}
           >
-            <Text>Find Route</Text>
+            <Text className="font-semibold text-lg">Find Route</Text>
           </TouchableOpacity>
 
           <View>

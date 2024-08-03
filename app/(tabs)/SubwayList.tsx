@@ -7,7 +7,11 @@ const SubwayList = () => {
   return (
     <GradientBlur>
       <SafeView isMain={false}>
-        <Text className="text-white">Subway list</Text>
+        <Text className="text-white">Explore All Metro Lines</Text>
+        <Text className="text-white">
+          Never miss any metro lines. Discover new routes everyday, right here
+          on MetroQuest.
+        </Text>
       </SafeView>
     </GradientBlur>
   );

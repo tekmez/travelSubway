@@ -24,7 +24,7 @@ const App = () => {
           className="bg-white h-12 justify-center rounded-lg mx-6 mb-16"
           onPress={() => router.push("/FindRoute")}
         >
-          <Text className="text-center text-xl">Find Route</Text>
+          <Text className="text-center text-xl font-semibold">Find Route</Text>
         </TouchableOpacity>
       </GradientBlur>
     </View>

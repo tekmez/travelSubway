@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  Platform,
   ScrollView,
   Text,
   TextInput,
@@ -49,7 +50,9 @@ const SearchableInput: React.FC<SearchableInputProps> = ({
         onChangeText={handleChanges}
         value={value}
         placeholder={placeholder}
-        className="p-2 border border-gray-300 rounded-md text-white"
+        className={`p-2 border border-gray-300 rounded-md text-white ${
+          Platform.OS === "ios" ? "h-12" : ""
+        }`}
         placeholderTextColor={"gray"}
       />
       {filterData.length > 0 && (
