@@ -1,4 +1,11 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import GradientBlur from "@/components/GradientBlur";
 import SafeView from "@/components/SafeView";
@@ -9,7 +16,7 @@ const FindRoute = () => {
   const [entrance, setEntrance] = useState("");
   const [exit, setExit] = useState("");
   const [error, setError] = useState("");
-  const [routes, setRoute] = useState<any>([]);
+  const [routes, setRoute] = useState<any>(null);
   useEffect(() => {
     if (entrance.trim() === "" || exit.trim() === "") return;
     if (entrance === exit) {
@@ -56,26 +63,31 @@ const FindRoute = () => {
               placeholder="Search for a subway exit"
             />
           </View>
-          {error && <Text style={styles.err}>{error}</Text>}
+          {error && <Text className="text-red-500">{error}</Text>}
           <TouchableOpacity
             className="bg-white h-12 justify-center items-center rounded-lg mt-4"
             onPress={onPress}
           >
             <Text className="font-semibold text-lg">Find Route</Text>
           </TouchableOpacity>
-
-          <View>
-            <Text className="text-white">Route</Text>
-            <Text className="text-white">
-              {routes.startLine} Line: {routes?.startRoute?.join(" -> ")}
-            </Text>
-            {routes.transferStation && (
-              <Text>Transfer at {routes?.transferStation} Station</Text>
-            )}
-            <Text className="text-white">
-              {routes.endLine} Line: {routes?.endRoute?.join(" -> ")}
-            </Text>
-          </View>
+          {routes && (
+            <ScrollView style={styles.routeContainer}>
+              {routes.lines.map((line: any, index: any) => (
+                <View key={index} style={styles.lineContainer}>
+                  <Text style={styles.lineTitle}>Hat: {line}</Text>
+                  {routes.stations[index].map((station: any, index: any) => (
+                    <Text key={index}>{station}</Text>
+                  ))}
+                  {index < routes.transfers.length && (
+                    <Text>
+                      Transfer: {routes.lines[index + 1]} -{" "}
+                      {routes.transfers[index]}
+                    </Text>
+                  )}
+                </View>
+              ))}
+            </ScrollView>
+          )}
         </View>
       </SafeView>
     </GradientBlur>
@@ -83,26 +95,36 @@ const FindRoute = () => {
 };
 
 const styles = StyleSheet.create({
-  entrance: {
-    gap: 8,
+  container: {
+    padding: 20,
   },
-  err: {
-    color: "#D04848",
-    textAlign: "center",
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
   },
-  button: {
-    alignItems: "center",
-    padding: 10,
-    borderRadius: 5,
+  inputContainer: {
+    marginBottom: 10,
+  },
+  input: {
     borderWidth: 1,
-    borderColor: "#0a7ea4",
+    borderColor: "gray",
+    padding: 8,
+    marginTop: 5,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+  routeContainer: {
+    marginTop: 20,
+    height: 300,
+  },
+  subtitle: {
+    fontSize: 18,
+    marginBottom: 10,
+  },
+  lineContainer: {
+    marginBottom: 20,
+  },
+  lineTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
 export default FindRoute;

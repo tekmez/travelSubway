@@ -2,9 +2,11 @@ interface MyObject {
   name: string;
   stations: string[];
   title: string;
+  id: string;
 }
 export const subwayLines: MyObject[] = [
   {
+    id: "1",
     name: "M1a",
     title: "Yenikapı - Atatürk Havalimanı",
     stations: [
@@ -30,6 +32,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M1b",
+    id: "2",
     title: "Yenikapı - Kirazlı",
     stations: [
       "Kirazlı-Bağcılar",
@@ -49,6 +52,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M2",
+    id: "3",
     title: "Yenikapı - Hacıosman",
     stations: [
       "Yenikapı",
@@ -71,6 +75,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M3",
+    id: "4",
     title: "Bakırköy - Kayaşehir",
     stations: [
       "Bakırköy Sahil",
@@ -96,6 +101,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M4",
+    id: "5",
     title: "Kadıköy - Sabiha Gökçen Havalimanı",
     stations: [
       "Kadıköy",
@@ -125,6 +131,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M5",
+    id: "6",
     title: "Üsküdar - Samandıra",
     stations: [
       "Üsküdar",
@@ -151,17 +158,19 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M6",
+    id: "7",
     title: "Levent - Hisarüstü",
     stations: [
       "Levent",
       "Nispetiye",
       "Etiler",
       "Boğaziçi Üniversitesi",
-      "Hisarüstü-Aşiyan",
+      "Hisarüstü",
     ],
   },
   {
     name: "M7",
+    id: "8",
     title: "Yıldız - Mahmutbey",
     stations: [
       "Yıldız",
@@ -185,6 +194,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M8",
+    id: "9",
     title: "Bostancı - Parseller",
     stations: [
       "Bostancı",
@@ -204,6 +214,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M9",
+    id: "10",
     title: "Ataköy - Olimpiyat",
     stations: [
       "Olimpiyat",
@@ -223,6 +234,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "M11",
+    id: "11",
     title: "Gayrettepe - İstanbul Airport",
     stations: [
       "Gayrettepe",
@@ -239,6 +251,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "Marmaray",
+    id: "12",
     title: "Halkalı - Gebze",
     stations: [
       "Halkalı",
@@ -289,6 +302,7 @@ export const subwayLines: MyObject[] = [
 
   {
     name: "T1",
+    id: "13",
     title: "Kabataş - Bağcılar",
     stations: [
       "Bağcılar",
@@ -326,6 +340,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "T3",
+    id: "14",
     title: "Kadıköy - Moda",
     stations: [
       "İskele Cami",
@@ -343,6 +358,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "T4",
+    id: "15",
     title: "Topkapı - Mescid-i Selam",
     stations: [
       "Mescid-i Selam",
@@ -371,6 +387,7 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "T5",
+    id: "16",
     title: "Eminönü - Alibeyköy",
     stations: [
       "Eminönü",
@@ -391,12 +408,14 @@ export const subwayLines: MyObject[] = [
   },
   {
     name: "F1",
+    id: "17",
     title: "Kabataş - Taksim",
     stations: ["Kabataş", "Taksim"],
   },
   {
     name: "F4",
+    id: "18",
     title: "Hisarüstü - Aşiyan",
-    stations: ["Kabataş", "Taksim"],
+    stations: ["Hisarüstü", "Aşiyan"],
   },
 ];
