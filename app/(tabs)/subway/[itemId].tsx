@@ -38,6 +38,7 @@ const Subway = () => {
                 <View className="border-b border-gray-500" />
               )}
               contentContainerStyle={{ paddingBottom: 250 }}
+              showsVerticalScrollIndicator={false}
             />
           </View>
         </View>

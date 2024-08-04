@@ -1,4 +1,4 @@
-import { ScrollView, Text, View } from "react-native";
+import { FlatList, ScrollView, Text, View } from "react-native";
 import React from "react";
 import GradientBlur from "@/components/GradientBlur";
 import SafeView from "@/components/SafeView";
@@ -17,13 +17,15 @@ const SubwayList = () => {
             Never miss any metro lines. Discover new routes everyday, right here
             on Metro Quest.
           </Text>
-          <ScrollView>
-            <View className="flex-row flex-wrap items-center justify-center">
-              {subwayLines.map((line) => (
-                <Card key={line.name} title={line.name} />
-              ))}
-            </View>
-          </ScrollView>
+          <FlatList
+            data={subwayLines}
+            renderItem={({ item }) => (
+              <Card key={item.name} name={item.name} title={item.title} />
+            )}
+            keyExtractor={(_, idx) => idx.toString()}
+            contentContainerStyle={{ paddingBottom: 200 }}
+            showsVerticalScrollIndicator={false}
+          />
         </View>
       </SafeView>
     </GradientBlur>

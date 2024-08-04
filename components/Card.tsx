@@ -1,17 +1,16 @@
 import { Text, TouchableOpacity } from "react-native";
 import { Link } from "expo-router";
 
-const Card = ({ title }: { title: string }) => {
+const Card = ({ name, title }: { name: string; title: string }) => {
   return (
     <Link
-      href={`/subway/${title}`}
-      className="p-4 rounded-lg border border-gray-300 min-w-[30%] my-2 mx-1"
+      href={`/subway/${name}`}
+      className="p-4 rounded-lg border border-gray-300 my-2 mx-1"
       asChild={true}
     >
       <TouchableOpacity>
-        <Text className="text-white font-bold text-center text-lg">
-          {title}
-        </Text>
+        <Text className="text-white font-bold text-center text-lg">{name}</Text>
+        <Text className="text-white text-center text-lg">{title}</Text>
       </TouchableOpacity>
     </Link>
   );
