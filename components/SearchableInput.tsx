@@ -45,7 +45,7 @@ const SearchableInput: React.FC<SearchableInputProps> = ({
 
   return (
     <View className="gap-2 mb-4">
-      <Text className="text-white">{label}</Text>
+      <Text className="text-white text-lg">{label}</Text>
       <TextInput
         onChangeText={handleChanges}
         value={value}
