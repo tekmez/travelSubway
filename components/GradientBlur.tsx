@@ -1,11 +1,9 @@
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { ImageBackground } from "react-native";
-
 type GradientBlurProps = {
   children: React.ReactNode;
 };
-
 const GradientBlur = ({ children }: GradientBlurProps) => {
   return (
     <ImageBackground
