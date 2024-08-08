@@ -13,9 +13,13 @@ const SubwayList = () => {
           <Text className="text-white text-center font-bold text-3xl">
             Explore All Metro Lines
           </Text>
-          <Text className="text-white text-center text-lg mb-2">
+          <Text className="text-white text-center text-lg">
             Never miss any metro lines. Discover new routes everyday, right here
             on Metro Quest.
+          </Text>
+          <Text className="text-white text-center text-lg mb-2">
+            Click on any of the metro lines to view the stations and their
+            details.
           </Text>
           <FlatList
             data={subwayLines}

@@ -33,7 +33,7 @@ const Subway = () => {
               ItemSeparatorComponent={() => (
                 <View className="border-b border-gray-500" />
               )}
-              contentContainerStyle={{ paddingBottom: 250 }}
+              contentContainerStyle={{ paddingBottom: 300 }}
               showsVerticalScrollIndicator={false}
             />
           </View>

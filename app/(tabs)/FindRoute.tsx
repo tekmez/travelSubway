@@ -1,32 +1,35 @@
-import {
-  FlatList,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import GradientBlur from "@/components/GradientBlur";
 import SafeView from "@/components/SafeView";
 import SearchableInput from "@/components/SearchableInput";
 import useRouteFinder from "@/hooks/useRouteFinder";
-
+import Feather from "@expo/vector-icons/Feather";
+import { BlurView } from "expo-blur";
 const FindRoute = () => {
   const [entrance, setEntrance] = useState("");
   const [exit, setExit] = useState("");
   const [error, setError] = useState("");
   const [routes, setRoute] = useState<any>(null);
-  useEffect(() => {
-    if (entrance.trim() === "" || exit.trim() === "") return;
-    if (entrance === exit) {
-      setError("Entrance and exit cannot be the same");
-    } else {
-      setError("");
-    }
-  }, [entrance, exit]);
+  // useEffect(() => {
+  //   if (entrance.trim() === "" || exit.trim() === "") return;
+  //   if (entrance === exit) {
+  //     setError("Entrance and exit cannot be the same");
+  //   } else {
+  //     setError("");
+  //   }
+  // }, [entrance, exit]);
 
   const onPress = () => {
+    if (entrance.trim() === "" || exit.trim() === "") {
+      setError("Please fill in both entrance and exit");
+      return;
+    }
+    if (entrance === exit) {
+      setError("Entrance and exit cannot be the same");
+      return;
+    }
+    setError("");
     if (error) {
       return;
     }
@@ -63,26 +66,54 @@ const FindRoute = () => {
               placeholder="Search for a subway exit"
             />
           </View>
-          {error && <Text className="text-red-500">{error}</Text>}
+          {error && <Text className="text-red-500 text-center">{error}</Text>}
           <TouchableOpacity
-            className="bg-white h-12 justify-center items-center rounded-lg mt-4"
+            className="bg-white h-12 justify-center items-center rounded-lg mt-2"
             onPress={onPress}
           >
             <Text className="font-semibold text-lg">Find Route</Text>
           </TouchableOpacity>
           {routes && (
-            <ScrollView style={styles.routeContainer}>
+            <ScrollView
+              contentContainerStyle={{
+                paddingTop: 16,
+                paddingBottom: 500,
+              }}
+            >
               {routes.lines.map((line: any, index: any) => (
-                <View key={index} style={styles.lineContainer}>
-                  <Text style={styles.lineTitle}>Hat: {line}</Text>
-                  {routes.stations[index].map((station: any, index: any) => (
-                    <Text key={index}>{station}</Text>
-                  ))}
-                  {index < routes.transfers.length && (
-                    <Text>
-                      Transfer: {routes.lines[index + 1]} -{" "}
-                      {routes.transfers[index]}
+                <View key={index}>
+                  <BlurView
+                    key={`${line}-${index}`}
+                    className="p-4 rounded-lg my-2 overflow-hidden"
+                    intensity={60}
+                    tint="dark"
+                  >
+                    <Text className="text-white text-center text-lg">
+                      Hat: {line}
                     </Text>
+
+                    <View className="flex-row justify-center flex-wrap">
+                      {routes.stations[index].map(
+                        (station: any, stationIndex: any) => (
+                          <Text className="text-white" key={stationIndex}>
+                            {station}
+                            {stationIndex < routes.stations[index].length - 1 &&
+                              " - "}
+                          </Text>
+                        )
+                      )}
+                    </View>
+                    {index < routes.transfers.length && (
+                      <Text className="text-white text-center">
+                        Transfer: {routes.lines[index + 1]} -{" "}
+                        {routes.transfers[index]}
+                      </Text>
+                    )}
+                  </BlurView>
+                  {index !== routes.lines.length - 1 && (
+                    <View className="items-center">
+                      <Feather name="arrow-down" size={32} color="white" />
+                    </View>
                   )}
                 </View>
               ))}
@@ -94,37 +125,4 @@ const FindRoute = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-  },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
-  },
-  inputContainer: {
-    marginBottom: 10,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: "gray",
-    padding: 8,
-    marginTop: 5,
-  },
-  routeContainer: {
-    marginTop: 20,
-    height: 300,
-  },
-  subtitle: {
-    fontSize: 18,
-    marginBottom: 10,
-  },
-  lineContainer: {
-    marginBottom: 20,
-  },
-  lineTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-});
 export default FindRoute;
