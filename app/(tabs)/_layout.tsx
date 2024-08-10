@@ -2,7 +2,9 @@ import React from "react";
 import { Tabs } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Entypo from "@expo/vector-icons/Entypo";
+import { useTranslation } from "react-i18next";
 const TabLayout = () => {
+  const { t } = useTranslation();
   return (
     <Tabs
       screenOptions={{
@@ -22,7 +24,7 @@ const TabLayout = () => {
       <Tabs.Screen
         name="FindRoute"
         options={{
-          title: "Find Route",
+          title: t("Find Route"),
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? "subway" : "subway-outline"}
@@ -35,7 +37,7 @@ const TabLayout = () => {
       <Tabs.Screen
         name="subway"
         options={{
-          title: "Subway List",
+          title: t("Subway List"),
           tabBarIcon: ({ color, focused }) => (
             <Entypo name="list" size={24} color={color} />
           ),

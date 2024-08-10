@@ -1,3 +1,22 @@
 {
-  "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps": "Akıllı algoritmamız sizin için en iyi rotayı oluşturacak. Karmaşık metro haritaları üzerinde düşünmeye son"
+  "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps": "Akıllı algoritmamız sizin için en iyi rotayı oluşturacak. Karmaşık metro haritaları üzerinde düşünmeye son",
+  "Find Route": "Rota Bul",
+  "Write the start and end points below and leave the rest to us": "Başlangıç ve bitiş noktalarını aşağıya yazın ve gerisini bize bırakın",
+  "Entrance": "Giriş",
+  "Exit": "Çıkış",
+  "Search for a subway entrance": "Bir metro girişi arayın",
+  "Search for a subway exit": "Bir metro çıkışı arayın",
+  "Search": "Ara",
+  "No results found": "Sonuç bulunamadı",
+  "Line": "Hat",
+  "Station": "Durak",
+  "Transfer": "Aktarma",
+  "Please fill in both entrance and exit": "Lütfen hem giriş hem de çıkışı doldurun",
+  "Entrance and exit cannot be the same": "Giriş ve çıkış aynı olamaz",
+  "Explore All Metro Lines": "Tüm Metro Hatlarını Keşfedin",
+  "Never miss any metro lines. Discover new routes everyday, right here on Metro Quest": "Hiçbir metro hattını kaçırmayın. Her gün yeni rotalar keşfedin, doğru burada, Metro Quest'te",
+  "Click on any of the metro lines to view the stations and their details": "Durakları ve detayları görmek için herhangi bir metro hattına tıklayın",
+  "Welcome to Metro Quest": "Metro Quest'e Hoşgeldiniz",
+  "Adventurous Journey with Metro Quest": "Metro Quest ile Macera Dolu Bir Yolculuk",
+  "Subway List": "Metro Listesi"
 }

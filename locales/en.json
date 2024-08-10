@@ -1,3 +1,22 @@
 {
-  "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps": "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps"
+  "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps": "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps",
+  "Find Route": "Find Route",
+  "Write the start and end points below and leave the rest to us": "Write the start and end points below and leave the rest to us",
+  "Entrance": "Entrance",
+  "Exit": "Exit",
+  "Search for a subway entrance": "Search for a subway entrance",
+  "Search for a subway exit": "Search for a subway exit",
+  "Search": "Search",
+  "No results found": "No results found",
+  "Line": "Line",
+  "Station": "Station",
+  "Transfer": "Transfer",
+  "Please fill in both entrance and exit": "Please fill in both entrance and exit",
+  "Entrance and exit cannot be the same": "Entrance and exit cannot be the same",
+  "Explore All Metro Lines": "Explore All Metro Lines",
+  "Never miss any metro lines. Discover new routes everyday, right here on Metro Quest": "Never miss any metro lines. Discover new routes everyday, right here on Metro Quest",
+  "Click on any of the metro lines to view the stations and their details": "Click on any of the metro lines to view the stations and their details",
+  "Welcome to Metro Quest": "Welcome to Metro Quest",
+  "Adventurous Journey with Metro Quest": "Adventurous Journey with Metro Quest",
+  "Subway List": "Subway List"
 }

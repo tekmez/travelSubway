@@ -1,3 +1,22 @@
 {
-  "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps": "Unser cleverer Algorithmus erstellt die beste Route für Sie. Kein Rätseln mehr über komplexe U-Bahn-Karten"
+  "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps": "Unser cleverer Algorithmus erstellt die beste Route für Sie. Kein Rätseln mehr über komplexe U-Bahn-Karten",
+  "Find Route": "Route finden",
+  "Write the start and end points below and leave the rest to us": "Schreiben Sie die Start- und Endpunkte unten und überlassen Sie uns den Rest",
+  "Entrance": "Eingang",
+  "Exit": "Ausgang",
+  "Search for a subway entrance": "Suchen Sie nach einem U-Bahn-Eingang",
+  "Search for a subway exit": "Suchen Sie nach einem U-Bahn-Ausgang",
+  "Search": "Suche",
+  "No results found": "Keine Ergebnisse gefunden",
+  "Line": "Linie",
+  "Station": "Station",
+  "Transfer": "Überweisen",
+  "Please fill in both entrance and exit": "Bitte füllen Sie sowohl den Eingang als auch den Ausgang aus",
+  "Entrance and exit cannot be the same": "Eingang und Ausgang können nicht identisch sein",
+  "Explore All Metro Lines": "Erkunden Sie alle U-Bahn-Linien",
+  "Never miss any metro lines. Discover new routes everyday, right here on Metro Quest": "Verpassen Sie keine U-Bahn-Linien. Entdecken Sie täglich neue Routen, genau hier bei Metro Quest",
+  "Click on any of the metro lines to view the stations and their details": "Klicken Sie auf eine der U-Bahn-Linien, um die Stationen und ihre Details anzuzeigen",
+  "Welcome to Metro Quest": "Willkommen bei Metro Quest",
+  "Adventurous Journey with Metro Quest": "Abenteuerliche Reise mit Metro Quest",
+  "Subway List": "U-Bahn-Liste"
 }

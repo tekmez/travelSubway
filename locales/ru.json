@@ -1,3 +1,22 @@
 {
-  "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps": "Наш умный алгоритм создаст для вас лучший маршрут. Больше не нужно ломать голову над сложными картами метро"
+  "Our clever algorithm will create the best route for you. No more puzzling over complex metro maps": "Наш умный алгоритм создаст для вас лучший маршрут. Больше не нужно ломать голову над сложными картами метро",
+  "Find Route": "Найти маршрут",
+  "Write the start and end points below and leave the rest to us": "Напишите начальную и конечную точки ниже и оставьте остальное за нами",
+  "Entrance": "Вход",
+  "Exit": "Выход",
+  "Search for a subway entrance": "Поиск входа в метро",
+  "Search for a subway exit": "Поиск выхода из метро",
+  "Search": "Поиск",
+  "No results found": "Результатов не найдено",
+  "Line": "Линия",
+  "Station": "Станция",
+  "Transfer": "Пересадка",
+  "Please fill in both entrance and exit": "Пожалуйста, заполните и вход, и выход",
+  "Entrance and exit cannot be the same": "Вход и выход не могут быть одинаковыми",
+  "Explore All Metro Lines": "Исследуйте все линии метро",
+  "Never miss any metro lines. Discover new routes everyday, right here on Metro Quest": "Не пропустите ни одной линии метро. Открывайте новые маршруты каждый день прямо здесь, на Metro Quest",
+  "Click on any of the metro lines to view the stations and their details": "Нажмите на любую из линий метро, чтобы просмотреть станции и их детали",
+  "Welcome to Metro Quest": "Добро пожаловать в Metro Quest",
+  "Adventurous Journey with Metro Quest": "Приключенческое путешествие с Metro Quest",
+  "Subway List": "Список метро"
 }

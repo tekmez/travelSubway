@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import SheetBottom from "@/components/SheetBottom";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
-import Icon from "react-native-ico-flags";
+import LanguageButton from "@/components/LanguageButton";
 
 const App = () => {
   const { t } = useTranslation();
@@ -23,15 +23,10 @@ const App = () => {
       <StatusBar style="light" />
       <GradientBlur>
         <SafeView isMain={true}>
-          <TouchableOpacity
-            className="absolute top-14 right-4"
-            onPress={handlePresentModalPress}
-          >
-            <Icon name="united-kingdom" width={40} height={40} />
-          </TouchableOpacity>
+          <LanguageButton onPress={handlePresentModalPress} />
           <View className="p-6 gap-6">
             <Text className="text-white text-center font-bold text-5xl">
-              Welcome to Metro Quest
+              {t("Welcome to Metro Quest")}
             </Text>
             <Text className="text-white text-center text-lg">
               {t(
@@ -44,7 +39,9 @@ const App = () => {
           className="bg-white h-12 justify-center rounded-lg mx-6 mb-16"
           onPress={() => router.push("/FindRoute")}
         >
-          <Text className="text-center text-xl font-semibold">Find Route</Text>
+          <Text className="text-center text-xl font-semibold">
+            {t("Find Route")}
+          </Text>
         </TouchableOpacity>
       </GradientBlur>
       <SheetBottom ref={bottomSheetModalRef} />

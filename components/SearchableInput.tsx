@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import useRouteSearch from "@/hooks/useRouteSearch";
+import { useTranslation } from "react-i18next";
 
 interface SearchableInputProps {
   label: string;
@@ -25,6 +26,7 @@ const SearchableInput: React.FC<SearchableInputProps> = ({
   const [filterData, setFilterData] = useState<string[]>([]);
   const [selected, setSelected] = useState(false);
   const matchingStations = useRouteSearch(value);
+  const { t } = useTranslation();
 
   const handleChanges = (query: string) => {
     onChange(query);
@@ -45,11 +47,11 @@ const SearchableInput: React.FC<SearchableInputProps> = ({
 
   return (
     <View className="gap-2 mb-4">
-      <Text className="text-white text-lg">{label}</Text>
+      <Text className="text-white text-lg">{t(label)}</Text>
       <TextInput
         onChangeText={handleChanges}
         value={value}
-        placeholder={placeholder}
+        placeholder={t(placeholder)}
         className={`p-2 border border-gray-300 rounded-md text-white ${
           Platform.OS === "ios" ? "h-12" : ""
         }`}

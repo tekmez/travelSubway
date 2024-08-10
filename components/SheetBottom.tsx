@@ -8,8 +8,15 @@ import {
 import Icon from "react-native-ico-flags";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/store/languageStore";
+type itemTypes = {
+  name: string;
+  icon: string;
+  lng: string;
+};
 const SheetBottom = forwardRef<any, any>((props, ref) => {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
+  const { setLng } = useLanguage();
   const country = [
     {
       name: "English",
@@ -32,9 +39,10 @@ const SheetBottom = forwardRef<any, any>((props, ref) => {
       lng: "ru",
     },
   ];
-  const changeLanguage = async (lang: string) => {
-    await AsyncStorage.setItem("language", lang);
-    i18n.changeLanguage(lang);
+  const changeLanguage = async (item: itemTypes) => {
+    await AsyncStorage.setItem("language", item.lng);
+    i18n.changeLanguage(item.lng);
+    setLng(item);
     ref?.current?.dismiss();
   };
   return (
@@ -45,7 +53,7 @@ const SheetBottom = forwardRef<any, any>((props, ref) => {
             {country.map((item, index) => (
               <TouchableOpacity
                 key={index}
-                onPress={() => changeLanguage(item.lng)}
+                onPress={() => changeLanguage(item)}
               >
                 <View key={`${item}-${index}`} className="items-center p-4">
                   <Icon name={item.icon} width={50} height={50} />
