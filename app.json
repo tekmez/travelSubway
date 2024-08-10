@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "travelSubway",
-    "slug": "travelSubway",
+    "name": "MetroQuest",
+    "slug": "metroquest",
     "version": "1.0.0",
     "orientation": "portrait",
-    "scheme": "myapp",
+    "scheme": "metroquest",
     "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
     "splash": {
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"

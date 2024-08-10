@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "255102487809",
+    "project_id": "metro-quest-656ea",
+    "storage_bucket": "metro-quest-656ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255102487809:android:4859bd53820ccec1655f00",
+        "android_client_info": {
+          "package_name": "com.tekmez.metroquest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtX_A5_srpIW5SemTOFqWu1mQOQFTypmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
