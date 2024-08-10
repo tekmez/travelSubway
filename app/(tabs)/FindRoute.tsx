@@ -61,13 +61,17 @@ const FindRoute = () => {
               placeholder="Search for a subway exit"
             />
           </View>
-          {error && <Text className="text-red-500 text-center">{error}</Text>}
           <TouchableOpacity
             className="bg-white h-12 justify-center items-center rounded-lg mt-2"
             onPress={onPress}
           >
             <Text className="font-semibold text-lg">{t("Find Route")}</Text>
           </TouchableOpacity>
+          {error && (
+            <Text className="text-red-500 text-center text-lg mt-4">
+              {t(error)}
+            </Text>
+          )}
           {routes && (
             <ScrollView
               contentContainerStyle={{
