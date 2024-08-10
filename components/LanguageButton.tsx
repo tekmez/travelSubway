@@ -1,6 +1,7 @@
 import { TouchableOpacity } from "react-native";
 import React from "react";
 import Icon from "react-native-ico-flags";
+import * as Localization from "expo-localization";
 import { useLanguage } from "@/store/languageStore";
 
 const LanguageButton = ({ onPress }: { onPress: () => void }) => {

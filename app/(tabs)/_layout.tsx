@@ -3,6 +3,7 @@ import { Tabs } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Entypo from "@expo/vector-icons/Entypo";
 import { useTranslation } from "react-i18next";
+import { Platform } from "react-native";
 const TabLayout = () => {
   const { t } = useTranslation();
   return (
@@ -18,6 +19,7 @@ const TabLayout = () => {
           borderRightWidth: 0.2,
           position: "absolute",
           overflow: "hidden",
+          height: Platform.OS === "ios" ? 75 : 50,
         },
       }}
     >

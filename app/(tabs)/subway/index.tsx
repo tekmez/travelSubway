@@ -12,7 +12,7 @@ const SubwayList = () => {
   return (
     <GradientBlur>
       <SafeView isMain={false}>
-        <ScrollView className="p-4">
+        <ScrollView className="p-4" showsVerticalScrollIndicator={false}>
           <Text className="text-white text-center font-bold text-3xl">
             {t("Explore All Metro Lines")}
           </Text>
