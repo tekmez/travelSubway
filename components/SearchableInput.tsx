@@ -28,13 +28,13 @@ const SearchableInput: React.FC<SearchableInputProps> = ({
 
   const handleChanges = (query: string) => {
     onChange(query);
-    setSelected(false); // Arama yapıldığında seçili durumu sıfırla
+    setSelected(false);
   };
 
   const handleSelectStation = (station: string) => {
     onChange(station);
     setFilterData([]);
-    setSelected(true); // Bir durak seçildiğinde seçili durumu güncelle
+    setSelected(true);
   };
 
   useEffect(() => {
@@ -57,14 +57,17 @@ const SearchableInput: React.FC<SearchableInputProps> = ({
       />
       {filterData.length > 0 && (
         <View className="max-h-[200px]">
-          <ScrollView className="border rounded-md border-gray-300">
+          <ScrollView
+            className="border rounded-md border-gray-300"
+            keyboardShouldPersistTaps="never"
+          >
             {filterData.map((station) => (
               <TouchableOpacity
                 key={station}
                 className="p-1"
                 onPress={() => handleSelectStation(station)}
               >
-                <Text className="text-white">{station}</Text>
+                <Text className="text-white text-lg">{station}</Text>
               </TouchableOpacity>
             ))}
           </ScrollView>
