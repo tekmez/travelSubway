@@ -11,12 +11,16 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "bundleIdentifier": "com.tekmez.metroquest",
       "supportsTablet": false,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
       }
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
+      "package": "com.tekmez.metroquest",
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
       }
@@ -31,7 +35,18 @@
       "bundler": "metro",
       "output": "static"
     },
-    "plugins": ["expo-router", "expo-localization"],
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "@react-native-firebase/app",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": { "useFrameworks": "static" }
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true
     }
