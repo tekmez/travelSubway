@@ -52,7 +52,7 @@ const FindRoute = () => {
               </Text>
               <Text className="text-white text-center text-lg">
                 {t(
-                  "Write the start and end points below and leave the rest to us"
+                  "Pick your start and finish destinations from the drop-down menu and leave the rest to us"
                 )}
               </Text>
             </View>
