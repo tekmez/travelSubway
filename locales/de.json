@@ -18,5 +18,8 @@
   "Click on any of the metro lines to view the stations and their details": "Klicken Sie auf eine der U-Bahn-Linien, um die Stationen und ihre Details anzuzeigen",
   "Welcome to Metro Quest": "Willkommen bei Metro Quest",
   "Adventurous Journey with Metro Quest": "Abenteuerliche Reise mit Metro Quest",
-  "Subway List": "U-Bahn-Liste"
+  "Subway List": "U-Bahn-Liste",
+  "select exit subway station": "Ausgang U-Bahnstation auswählen",
+  "select entrance subway station": "Eingang U-Bahnstation auswählen",
+  "Search for a subway station": "Suche nach einer U-Bahn-Station"
 }

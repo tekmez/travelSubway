@@ -8,7 +8,7 @@ import {
 import Icon from "react-native-ico-flags";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/store/languageStore";
+import { useGeneralContext } from "@/store/generalStore";
 type itemTypes = {
   name: string;
   icon: string;
@@ -16,7 +16,7 @@ type itemTypes = {
 };
 const SheetBottom = forwardRef<any, any>((props, ref) => {
   const { i18n } = useTranslation();
-  const { setLng } = useLanguage();
+  const { setLng } = useGeneralContext();
   const country = [
     {
       name: "English",

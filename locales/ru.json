@@ -18,5 +18,8 @@
   "Click on any of the metro lines to view the stations and their details": "Нажмите на любую из линий метро, чтобы просмотреть станции и их детали",
   "Welcome to Metro Quest": "Добро пожаловать в Metro Quest",
   "Adventurous Journey with Metro Quest": "Приключенческое путешествие с Metro Quest",
-  "Subway List": "Список метро"
+  "Subway List": "Список метро",
+  "select exit subway station": "выберите станцию метро выхода",
+  "select entrance subway station": "выберите станцию метро входа",
+  "Search for a subway station": "Поиск станции метро"
 }

@@ -18,5 +18,8 @@
   "Click on any of the metro lines to view the stations and their details": "Durakları ve detayları görmek için herhangi bir metro hattına tıklayın",
   "Welcome to Metro Quest": "Metro Quest'e Hoşgeldiniz",
   "Adventurous Journey with Metro Quest": "Metro Quest ile Macera Dolu Bir Yolculuk",
-  "Subway List": "Metro Listesi"
+  "Subway List": "Metro Listesi",
+  "select exit subway station": "çıkış metro istasyonunu seçin",
+  "select entrance subway station": "giriş metro istasyonunu seçin",
+  "Search for a subway station": "Bir metro istasyonu arayın"
 }
