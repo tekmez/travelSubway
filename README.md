@@ -1,50 +1,26 @@
-# Welcome to your Expo app 👋
+# Metro Quest
+**Discover the ultimate way to navigate Istanbul's rail network with Metro Quest!** Whether you're a local resident or a first-time visitor, Metro Quest is your perfect guide to finding the fastest and most efficient routes across the city’s metro, tram, and train lines.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Key Features
 
-## Get started
+- **Comprehensive Rail Network**: Get complete access to all of Istanbul’s metro, tram, and suburban train lines with detailed maps and station information.
+- **Smart Route Planning**: Find the best route to your destination with clear, step-by-step instructions and easy-to-follow transfer points.
+- **Offline Mode**: Plan your trips without worrying about internet connectivity. All maps and route details are available offline.
+- **User-Friendly Design**: With its intuitive and simple interface, Metro Quest makes journey planning quick and easy for everyone.
 
-1. Install dependencies
+Navigate Istanbul with confidence and ease. Whether you're commuting to work or exploring the city's rich culture, Metro Quest is your go-to app for all your rail transport needs.
 
-   ```bash
-   npm install
-   ```
+## Screenshots
+![welcome](https://github.com/user-attachments/assets/f141cfeb-e5ed-4a9d-b975-6bcecb3f4332)
+![findscreen](https://github.com/user-attachments/assets/dbdc6d99-bd49-4a84-9d30-ccf92c3a55a8)
+![stations](https://github.com/user-attachments/assets/32f56d4e-03cb-49e3-8dd3-85ecc1230191)
 
-2. Start the app
+## Usage
+- **Select Language**: Choose your preferred language from the app settings.
+- **Choose Entry and Exit Points**: Tap on the map to select your starting and destination stations.
+- **View Route**: The app will display the optimal route on the map.
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Technologies Used
+- **React Native**
+- **Expo**
+- **Expo Router**
